@@ -13,15 +13,11 @@ const ClassificadoOverview = ({ classificados }) => {
   return classificados.map(({ id, ...otherProps }) => {
     return (
       <Grid className="classificado-overview" key={id} item>
-        {id % 3 === 0 ? (
-          <Box mb={3.5}>
+        <Grid item xs={4}>
+          <Box mb={3}>
             <ClassificadoItem key={id} {...otherProps} />
           </Box>
-        ) : (
-          <Box mb={3} mr={3.5}>
-            <ClassificadoItem key={id} {...otherProps} />
-          </Box>
-        )}
+        </Grid>
       </Grid>
     );
   });

@@ -82,7 +82,7 @@ const AddClassificadoForm = ({
               disabled={isSubmitting}
               onClick={submitForm}
             >
-              Submit
+              Adicionar
             </Button>
           </Grid>
         </Form>

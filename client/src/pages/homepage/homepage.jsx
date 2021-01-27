@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
+import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 import AddIcon from "@material-ui/icons/Add";
 
 import {
@@ -18,7 +21,22 @@ import ClassificadoOverviewContainer from "../../components/classificado-overvie
 import ClassificadoCounter from "../../components/classificado-counter/classificado-counter";
 import AddClassificadoDialog from "../../components/add-classificado-modal/add-classificado-dialog";
 
+const useStyles = makeStyles(() => ({
+  card: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+  },
+  homeCardTop: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+  },
+}));
+
 const Homepage = ({ fetchClassificadosStart, toggleDialog }) => {
+  const classes = useStyles();
+
   useEffect(() => {
     fetchClassificadosStart();
   }, [fetchClassificadosStart]);
@@ -28,20 +46,19 @@ const Homepage = ({ fetchClassificadosStart, toggleDialog }) => {
   };
 
   return (
-    <div className="homepage">
-      <Container className="content" maxWidth="md">
-        <Grid className="homepage-classificados" container item xs={12}>
-          <Grid className="homepage-title" item xs={8}>
-            <h2>Classificados</h2>
-          </Grid>
-          <Grid
-            className="homepage-add-button"
-            xs={4}
-            container
-            item
-            justify="flex-end"
+    <Container className={classes.root} maxWidth="md">
+      <Grid className="homepage-classificados" container item xs={12}>
+        <Card className={classes.card}>
+          <Box
+            display="flex"
+            flexDirection="row"
+            justifyContent="space-between"
+            my={2}
           >
-            <Box mt={2} mb={1}>
+            <Box className="homepage-title" ml={2}>
+              <Typography variant="h3">Classificados</Typography>
+            </Box>
+            <Box mt={1} mr={2}>
               <Button
                 variant="contained"
                 color="primary"
@@ -52,20 +69,20 @@ const Homepage = ({ fetchClassificadosStart, toggleDialog }) => {
               </Button>
               <AddClassificadoDialog />
             </Box>
-          </Grid>
+          </Box>
           <Grid className="homepage-classificados-list" item xs={12}>
-            <Grid container justify="flex-start">
+            <Grid container justify="space-around">
               <ErrorBoundary>
                 <ClassificadoOverviewContainer />
               </ErrorBoundary>
             </Grid>
           </Grid>
-          <Grid className="homepage-classificados-list" item xs={12}>
+          <Box className="homepage-classificados-list" my={2} ml={3}>
             <ClassificadoCounter />
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
+          </Box>
+        </Card>
+      </Grid>
+    </Container>
   );
 };
 

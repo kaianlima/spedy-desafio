@@ -10,13 +10,13 @@ No Front-end foram utilizados:
 No Back-end foram utilizados:
 ``Spring, Spring Boot, Hibernate e MySQL```
 
-###
+### Detalhes
 
 Se a porta do front-end for alterada, é necessário ajustar no back-end, no arquivo
 
 ### `server/src/main/java/../dao/ClassificadoRepository`
 
-Caso a porta do back-end for alterada, é necessário ajustar no front-end, o proxy no arquivo
+Se a porta do back-end for alterada, é necessário ajustar no front-end, o proxy no arquivo
 
 ### `client/package.json`
 

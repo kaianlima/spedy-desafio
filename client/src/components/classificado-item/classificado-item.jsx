@@ -9,16 +9,27 @@ import Typography from "@material-ui/core/Typography";
 
 import { formatDate } from "../../App.utils";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: 285,
+    width: 270,
     minHeight: 255,
+    boxShadow: "0 5px 8px 0 rgba(0,0,0,0.3)",
+    backgroundColor: "transparent",
+    "&:hover": {
+      boxShadow: "0 10px 16px 0 rgba(0,0,0,0.3)",
+    },
   },
   cardHeader: {
     minHeight: 120,
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
+    backgroundColor: theme.palette.primary.dark,
+
+    color: theme.palette.primary.contrastText,
+    "& .MuiTypography-colorTextSecondary": {
+      color: "rgba(255, 255, 255, 0.54)",
+    },
   },
   cardTitle: {
     minHeight: 80,
