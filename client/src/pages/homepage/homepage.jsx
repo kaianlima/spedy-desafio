@@ -70,13 +70,16 @@ const Homepage = ({ fetchClassificadosStart, toggleDialog }) => {
               <AddClassificadoDialog />
             </Box>
           </Box>
-          <Grid className="homepage-classificados-list" item xs={12}>
-            <Grid container justify="space-around">
-              <ErrorBoundary>
-                <ClassificadoOverviewContainer />
-              </ErrorBoundary>
-            </Grid>
-          </Grid>
+          <Box
+            className="homepage-classificados-list"
+            display="flex"
+            flexDirection="row"
+            flexWrap="wrap"
+          >
+            <ErrorBoundary>
+              <ClassificadoOverviewContainer />
+            </ErrorBoundary>
+          </Box>
           <Box className="homepage-classificados-list" my={2} ml={3}>
             <ClassificadoCounter />
           </Box>
