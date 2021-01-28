@@ -14,6 +14,14 @@ No Back-end foram utilizados:
 
 Se a porta do front-end for alterada, é necessário ajustar no back-end, no arquivo
 
+### Prints app rodando
+
+<img src="https://imgur.com/li2JlGI" alt="Screenshot Home" width="100%">
+
+<img src="https://imgur.com/m1hMvTZ" alt="Screenshot Adicionar Classificado" width="100%">
+
+<img src="https://imgur.com/jzr4Qjq" alt="Screenshot Home Confirmação" width="100%">
+
 ### `server/src/main/java/../dao/ClassificadoRepository`
 
 Se a porta do back-end for alterada, é necessário ajustar no front-end, o proxy no arquivo
