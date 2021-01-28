@@ -80,7 +80,7 @@ const Homepage = ({ fetchClassificadosStart, toggleDialog }) => {
               <ClassificadoOverviewContainer />
             </ErrorBoundary>
           </Box>
-          <Box className="homepage-classificados-list" my={2} ml={3}>
+          <Box className="homepage-classificados-list" mb={2} ml={3}>
             <ClassificadoCounter />
           </Box>
         </Card>
