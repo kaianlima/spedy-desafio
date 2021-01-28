@@ -16,11 +16,11 @@ Se a porta do front-end for alterada, é necessário ajustar no back-end, no arq
 
 ### Prints app rodando
 
-<img src="https://imgur.com/li2JlGI" alt="Screenshot Home" width="100%">
+<img src="https://i.imgur.com/li2JlGI.png" alt="Screenshot Home" width="100%">
 
-<img src="https://imgur.com/m1hMvTZ" alt="Screenshot Adicionar Classificado" width="100%">
+<img src="https://i.imgur.com/m1hMvTZ.png" alt="Screenshot Adicionar Classificado" width="100%">
 
-<img src="https://imgur.com/jzr4Qjq" alt="Screenshot Home Confirmação" width="100%">
+<img src="https://i.imgur.com/jzr4Qjq.png" alt="Screenshot Home Confirmação" width="100%">
 
 ### `server/src/main/java/../dao/ClassificadoRepository`
 
